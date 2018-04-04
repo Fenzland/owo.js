@@ -4,3 +4,13 @@ export function press( e, )
 	
 	this.dispatch( `KEY:${e.key}:${modifier}`, ) && e.preventDefault();
 }
+
+export function click( e, )
+{
+	if( e.target.hasAttribute( 'owo-click', ) )
+	{
+		const name= e.target.getAttribute( 'owo-click', );
+		
+		this.dispatch( `CLICK:${name}`, ) && e.preventDefault();
+	}
+}
