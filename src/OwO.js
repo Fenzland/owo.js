@@ -5,6 +5,7 @@ class OwO
 	constructor()
 	{
 		this.listeners= {};
+		this.mappings= {};
 	}
 	
 	listen( event, callback, weight=1, )
@@ -35,6 +36,16 @@ class OwO
 		if(!( index >= 0 )) return;
 		
 		listeners.splice( index, 1, );
+	}
+	
+	map( event, target, )
+	{
+		this.mappings[event]= target;
+	}
+	
+	unmap( event, )
+	{
+		this.mappings[event]= undefined;
 	}
 }
 
