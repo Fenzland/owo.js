@@ -47,6 +47,27 @@ class OwO
 	{
 		this.mappings[event]= undefined;
 	}
+	
+	dispatch( event, context, params, )
+	{
+		const listeners= this.listeners[event];
+		const mapped= this.mappings[event];
+		
+		if( listeners )
+		{
+			for( let i= listeners.length-1; i>=0; i-- )
+			{
+				const result= listeners[i].call( context, params, );
+				
+				if( result ) return result;
+			}
+		}
+		
+		if( mapped )
+		{
+			return this.dispatch( mapped, );
+		}
+	}
 }
 
 export default OwO;
