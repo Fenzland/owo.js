@@ -35,12 +35,12 @@ owo.unlisten( eventName, listener, );  // Stop listening the event.
 Mapping one event to another.
 
 ```js
-owo.listen( 'quit', ()=>{ /**/ } );
-owo.listen( 'end-process', ()=>{ /**/ } );
+owo.listen( 'quit', ()=>{ /**/ }, );
+owo.listen( 'end-process', ()=>{ /**/ }, );
 
 owo.map( 'KEY:Escape:0', 'quit', );           // Map key 'Esc' to event 'quit';
 owo.map( 'KEY:Escape:0', 'end-process', );    // Change mapping key 'Esc' to event 'end-process';
-owo.unmap( 'KEY:Escape:0' );                  // Stop mapping key 'ESC'.
+owo.unmap( 'KEY:Escape:0', );                  // Stop mapping key 'ESC'.
 ```
 
 Keyboards event.
@@ -89,7 +89,7 @@ Using click event.
 <script type="module">
 import owo from 'https://some.cdn.host/path/to/owo.js';
 
-owo.listen( 'CLICK:close-dialog', ()=>{ /**/ } );
+owo.listen( 'CLICK:close-dialog', ()=>{ /**/ }, );
 </script>
 ```
 
