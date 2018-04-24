@@ -92,3 +92,16 @@ import owo from 'https://some.cdn.host/path/to/owo.js';
 owo.listen( 'CLICK:close-dialog', ()=>{ /**/ } );
 </script>
 ```
+
+Using Debuger.
+
+```js
+import owo from 'https://some.cdn.host/path/to/owo.js';
+import debug from 'https://some.cdn.host/path/to/debuger.js';
+
+debug( owo, )
+
+// own.listen...
+```
+
+Ther debuger will dump event name with console.log when the event is dispatched.
